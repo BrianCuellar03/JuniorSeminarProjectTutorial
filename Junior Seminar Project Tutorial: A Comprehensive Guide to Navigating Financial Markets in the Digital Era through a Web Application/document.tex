@@ -1,0 +1,234 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage{caption}
+% use the oxycomps style file
+\usepackage{oxycomps}
+\usepackage{graphicx}
+\usepackage{listings}
+
+
+% include metadata in the generated pdf file
+\pdfinfo{
+    /Title (Junior Seminar Project Tutorial: A Comprehensive Guide to Navigating Financial Markets in the Digital Era through a Web Application)
+    /Author (Brian Cuellar)
+}
+
+% set the title and author information
+\title{Junior Seminar Project Tutorial: A Comprehensive Guide to Navigating Financial Markets in the Digital Era through a Web Application}
+\author{Brian Cuellar}
+\affiliation{Occidental College}
+\email{bcuellar@oxy.edu}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+In today's digital age, the accessibility of social media and technology has made it easier than ever to reach a broad audience and generate interest in lucrative hobbies or investment opportunities. The promise of earning money from one's phone is enticing to many, with the stock market, futures trading, and cryptocurrency gaining significant attention. However, this surge in popularity has also led to a proliferation of misinformation, deceptive practices, and opportunists looking to exploit the less informed.
+
+In response to these challenges, I am driven to develop an application aimed at demystifying these financial markets. This app will cover essential topics, including an introduction to the stock market, options trading, cryptocurrency, and the futures market, highlighting their differences. Presented through a responsive HTML/CSS website, the primary goal is to provide users with the knowledge and tools necessary to navigate these areas confidently. By dismissing common misconceptions and offering a foundation rooted in statistics, scholarly research, personal anecdotes, and in-depth analysis, the app aims to empower individuals to embark on their financial journey on solid ground, steering clear of the losses associated with promises of guaranteed returns or quick riches often promoted on social media.
+
+\section{Tutorial On Creating A Website}
+
+For the tutorial, I've decided to refresh my knowledge and skills on creating a website. As I am focusing on developing a web application, I've chosen to cover HTML and CSS in this tutorial. To illustrate a practical example for my application's tutorial, I'm creating a simple webpage layout using HTML and CSS. This example will focus on showcasing foundational techniques in web design, which will be directly applied to my project. I'll also discuss slight deviations to enhance usability and aesthetic appeal beyond basic tutorials.
+
+
+\subsection{Introduction}
+
+In the journey of developing a responsive and user-friendly web application, it all starts with HyperText Markup Language (HTML). HTML forms the structural framework for websites and web applications, enabling developers to organize and define content.
+
+Once a solid HTML foundation is laid for our web application, the next crucial step involves employing Cascading Style Sheets (CSS). CSS plays a vital role in converting the static HTML structure into an engaging and interactive experience for users. It allows developers to customize layout, colors, fonts, animations, and other visual aspects, greatly enhancing the user interface and overall experience.
+
+To begin the web application creation process, I've opted for Visual Studio Code as my integrated development environment (IDE). I've set up a new folder named "JuniorSeminar" on my desktop and added my HTML and CSS files.
+
+
+\centering
+\includegraphics[width=0.5\linewidth]{Screenshot 2024-03-22 at 10.29.46 PM.png}
+
+
+
+\subsection{Creating a Simple Website In HTML}
+
+\begin{lstlisting}[language=HTML, caption={HTML Document}, label=lst:htmlcode]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Education App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Financial Education Web Application</h1>
+        <nav>
+            <ul>
+                <li><a href="#optionsTrading">Options Trading</a></li>
+                <li><a href="#cryptoOverview">Crypto Overview</a></li>
+                <li><a href="#futuresMarket">Futures Market</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="optionsTrading">
+            <h2>Options Trading and The Greeks</h2>
+            <p>Options trading fundamentals, including Delta, Gamma, Theta, and Vega.</p>
+        </section>
+        <section id="cryptoOverview">
+            <h2>Cryptocurrency Overview</h2>
+            <p>An introduction to cryptocurrencies and how they work.</p>
+        </section>
+        <section id="futuresMarket">
+            <h2>The Futures Market</h2>
+            <p>Differences between futures and traditional stock trading.</p>
+        </section>
+    </main>
+    <footer>
+        <p>2024 Financial Education App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+\end{lstlisting}
+
+\subsection{Examining Website.HTML: Document Type and Language}
+
+\textbf{DOCTYPE html}: Declares the document type and HTML version (HTML5 here), ensuring that browsers render the page correctly.
+
+\textbf{html lang="en":} Sets the language of the document to English, aiding accessibility and search engine optimization.
+
+\subsection{Head Section}
+\textbf{head:} Contains meta-information about the webpage.
+
+meta charset ="UTF-8": Specifies the character encoding for the webpage (UTF-8), supporting a wide range of characters.
+
+meta name = "viewport" content="width=device-width, initial-scale=1.0": Ensures the page is responsive, scaling the layout to fit the width of the device's screen.
+
+title: Specifies the title of the web page as seen in the browser's title bar or tab.
+
+link rel="stylesheet" href="style.css": Links an external CSS file to the HTML document, controlling the appearance and layout of the webpage.
+
+\subsection{Body Section}
+\textbf{body:} Houses the main content of the webpage.
+
+\textbf{header:} Serves as the top section of the webpage, containing:
+
+h1: The main heading, providing users with the name and primary focus of the web application: "Financial Education Web Application".
+
+nav: The navigation block, which includes:
+ul: An unordered list of navigation items, each (li) containing:
+a href="#sectionId": Anchor links allowing users to jump to specific sections of the page (identified by their id attributes).
+
+\textbf{main: }The central content area, divided into sections (section), each dedicated to a specific topic:
+
+id="optionsTrading", id="cryptoOverview", and id="futuresMarket": These IDs make each section directly accessible via the navigation menu.
+
+
+Inside each \textbf{section,} there are:
+\textbf{h2: }Subheadings that introduce the topic of each section.
+
+\textbf{p:} Paragraphs providing a brief overview or introduction to the topic discussed in the section.
+
+\textbf{footer:} Contains copyright information, signaling the end of the content and providing legal protection for the material on the site.
+
+\section{CSS}
+
+The CSS complements the HTML structure of the Financial Education Web Application by defining visual aesthetics so that the HTML document's content is presented in a visually appealing manner. 
+
+\begin{lstlisting}[language=CSS, caption={Simplified CSS for Website.HTML}, label=lst:csscode]
+/* Simplified Reset and Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Basic Layout */
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+header, footer {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+}
+\end{lstlisting}
+
+\subsection{CSS Breakdown}
+
+\textbf{Global Reset and Typography:} Uniformly styles all HTML elements for consistency.
+
+\textbf{Basic Layout:} Centers content and applies consistent spacing within the HTML structure.
+
+\textbf{Header and Footer Styling:} Uniformly colors and aligns the HTML 
+\textbf{header} and \textbf{footer}.
+
+\textbf{Navigation Styling:} Makes the HTML \textbf{nav} section visually coherent and user-friendly.
+
+\textbf{Main Content and Sections: }Visually separates and enhances HTML \textbf{main} and \textbf{section }areas.
+
+\textbf{Section (Typography Enhancements):} Modifies text within the HTML document such as \textbf{h1},\textbf{ h2}, and \textbf{p}, ensuring readability and aesthetics. 
+
+\section{Results}
+
+To evaluate the success of my project in building a web application, I measured progress by my ability to refresh and apply HTML and CSS concepts essential for the application's development. Successfully creating and styling a basic HTML website, along with learning how to host it online, were signs of progress and foundational skill development for my project.
+
+\includegraphics[width=1\linewidth]{Screenshot 2024-03-23 at 12.18.13 AM.png}
+\captionof{figure}{Website.HTML without CSS.}
+
+\hspace{10cm}
+
+\includegraphics[width=1\linewidth]{Screenshot 2024-03-23 at 12.20.55 AM.png}
+\captionof{figure}{Website.HTML with CSS.}
+
+\section{Reflection}
+
+Revisiting HTML and CSS after a significant break was a refreshing experience. Doing this tutorial to create a basic website felt like a natural and positive starting point, considering my project involves building a web application. Initially, I wanted to develop a web scraper in Python to extract links from news articles containing specific keywords like "CPI Report" or unbiased reviews of new policies and macroeconomic changes with the intention to display them on a personal website. However, finding a suitable tutorial for that was challenging. 
+
+I'm enthusiastic about my project topic, as it aligns with my interests and addresses a problem I find meaningful. 
+
+My primary concern is ensuring the technical complexity of creating a web application, particularly in incorporating algorithmic elements, to deepen the project's technical engagement.
+
+
+
+
+\end{document}
